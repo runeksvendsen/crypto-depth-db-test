@@ -1,0 +1,32 @@
+resolver: lts-12.5
+
+packages:
+- .
+- location:
+    git: https://github.com/runeksvendsen/crypto-depth-db.git
+    commit: 73d99e802f7597ca17fd276a6b0fe5eb24380371
+  extra-dep: true
+- location:
+    git: https://github.com/runeksvendsen/crypto-depth.git
+    commit: 1e72a2d25f0e4e1f9c24a18957cc69b3ccfa10e9
+  extra-dep: true
+- location:
+    git: https://github.com/runeksvendsen/crypto-venues.git
+    commit: 84043b03ba0292d19477f1f765ac91e812edc056
+  extra-dep: true
+- location:
+    git: https://github.com/runeksvendsen/orderbook.git
+    commit: a8b3cad89036c1613618792943bc6261c02eb4fe
+  extra-dep: true
+- location:
+    git: https://github.com/runeksvendsen/beam.git
+    commit: 62e48d1fd27dc54f73e1184f89c0b52fee7a65d7
+    subdirs:
+      - beam-core
+      - beam-postgres
+  extra-dep: true
+
+extra-deps:
+- logging-3.0.5@sha256:88096d3124fce9a19af3720f751e1a354d866ed5030d2e5197238d2277cdb2f2
+- rate-limit-1.4.1@sha256:27abe882e8b7851202cac124ea2b631e77ab7216f7a655b0782704838fe3c305
+- time-units-1.0.0@sha256:27cf54091c4a0ca73d504fc11d5c31ab4041d17404fe3499945e2055697746c1

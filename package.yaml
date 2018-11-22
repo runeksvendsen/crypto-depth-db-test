@@ -1,0 +1,34 @@
+name:                crypto-depth-db-test
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/runeksvendsen/crypto-depth-db-test#readme
+license:             BSD3
+author:              Rune K. Svendsen
+maintainer:          runesvend@gmail.com
+copyright:           CC0
+category:            value
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - crypto-depth-db
+  - crypto-depth
+  - crypto-venues
+  - orderbook
+  - beam-core
+  - beam-migrate
+  - beam-postgres
+  - time
+  - unordered-containers
+  - aeson
+  - bytestring
+  - zip-archive
+  - file-embed
+
+library:
+  source-dirs: src
+  ghc-options:
+  - -Wall
+  - -fno-warn-name-shadowing
