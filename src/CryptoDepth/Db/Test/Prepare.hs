@@ -96,9 +96,9 @@ openConn = do
     dbUrl <- dbUrlFromConf
     Postgres.connectPostgreSQL (toS dbUrl)
   where
+    jsonData = $(makeRelativeToProject "test/config/docker.json" >>= embedFile)
     dbUrlFromConf = do
-        Json.Object dbConf <- either error return =<<
-            Json.eitherDecodeFileStrict "test/config/docker.json"
+        Json.Object dbConf <- either error return (Json.eitherDecodeStrict jsonData)
         let dbUrlKey = "db_url"
             (Json.String dbUrl) = fromMaybe (error $ show dbUrlKey ++ " not found") $
                 Map.lookup dbUrlKey dbConf
