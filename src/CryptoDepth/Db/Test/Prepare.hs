@@ -4,6 +4,11 @@
 module CryptoDepth.Db.Test.Prepare
 ( runWithDb
 , openConn
+-- * Re-exports
+, module Run
+, module Insert
+, module Query
+, module Util
 )
 where
 
@@ -11,6 +16,9 @@ import           CryptoDepth.Db.Internal.Prelude
 import           CryptoDepth.Db.Internal.Orphans            ()
 import qualified CryptoDepth.Db.Internal.Migrate.Run        as Run
 import qualified CryptoDepth.Db.Insert                      as Insert
+import           CryptoDepth.Db.Query                       as Query
+import           CryptoDepth.Db.Internal.Util               as Util
+
 import qualified CryptoDepth                                as CD
 
 import qualified Data.HashMap.Strict                        as Map
