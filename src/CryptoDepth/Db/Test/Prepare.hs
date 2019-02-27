@@ -13,7 +13,6 @@ module CryptoDepth.Db.Test.Prepare
 where
 
 import           CryptoDepth.Db.Internal.Prelude
-import           CryptoDepth.Db.Internal.Orphans            ()
 import qualified CryptoDepth.Db.Internal.Migrate.Run        as Run
 import qualified CryptoDepth.Db.Insert                      as Insert
 import           CryptoDepth.Db.Query                       as Query
